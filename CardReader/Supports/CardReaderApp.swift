@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+import CobyDS
+
 @main
 struct CardReaderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .loadCustomFonts()
         }
     }
 }

@@ -11,6 +11,8 @@
 		CBE521D52C1690B3005F52ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE521D42C1690B3005F52ED /* ContentView.swift */; };
 		CBE521D72C1690B4005F52ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE521D62C1690B4005F52ED /* Assets.xcassets */; };
 		CBE521DA2C1690B4005F52ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE521D92C1690B4005F52ED /* Preview Assets.xcassets */; };
+		CBE521E22C16917B005F52ED /* CobyDS in Frameworks */ = {isa = PBXBuildFile; productRef = CBE521E12C16917B005F52ED /* CobyDS */; };
+		CBE521F02C169579005F52ED /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE521EF2C169579005F52ED /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		CBE521D42C1690B3005F52ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBE521D62C1690B4005F52ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBE521D92C1690B4005F52ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CBE521EF2C169579005F52ED /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE521E22C16917B005F52ED /* CobyDS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +55,9 @@
 		CBE521D12C1690B3005F52ED /* CardReader */ = {
 			isa = PBXGroup;
 			children = (
-				CBE521D22C1690B3005F52ED /* CardReaderApp.swift */,
-				CBE521D42C1690B3005F52ED /* ContentView.swift */,
-				CBE521D62C1690B4005F52ED /* Assets.xcassets */,
+				CBE521E52C1691B4005F52ED /* Views */,
+				CBE521E42C1691A4005F52ED /* Supports */,
+				CBE521E32C16918B005F52ED /* Resources */,
 				CBE521D82C1690B4005F52ED /* Preview Content */,
 			);
 			path = CardReader;
@@ -65,6 +69,39 @@
 				CBE521D92C1690B4005F52ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CBE521E32C16918B005F52ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CBE521D62C1690B4005F52ED /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CBE521E42C1691A4005F52ED /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CBE521D22C1690B3005F52ED /* CardReaderApp.swift */,
+				CBE521D42C1690B3005F52ED /* ContentView.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		CBE521E52C1691B4005F52ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CBE521EE2C16956E005F52ED /* Camera */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CBE521EE2C16956E005F52ED /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				CBE521EF2C169579005F52ED /* CameraView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,9 @@
 			dependencies = (
 			);
 			name = CardReader;
+			packageProductDependencies = (
+				CBE521E12C16917B005F52ED /* CobyDS */,
+			);
 			productName = CardReader;
 			productReference = CBE521CF2C1690B3005F52ED /* CardReader.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +151,9 @@
 				Base,
 			);
 			mainGroup = CBE521C62C1690B3005F52ED;
+			packageReferences = (
+				CBE521E02C16917B005F52ED /* XCRemoteSwiftPackageReference "CobyDS" */,
+			);
 			productRefGroup = CBE521D02C1690B3005F52ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE521F02C169579005F52ED /* CameraView.swift in Sources */,
 				CBE521D52C1690B3005F52ED /* ContentView.swift in Sources */,
 				CBE521D32C1690B3005F52ED /* CardReaderApp.swift in Sources */,
 			);
@@ -275,6 +319,7 @@
 				DEVELOPMENT_TEAM = 3Y8YH8GWMM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage to obtain credit card credentials from Credit cards.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +349,7 @@
 				DEVELOPMENT_TEAM = 3Y8YH8GWMM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage to obtain credit card credentials from Credit cards.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CBE521E02C16917B005F52ED /* XCRemoteSwiftPackageReference "CobyDS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CobyLibrary/CobyDS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBE521E12C16917B005F52ED /* CobyDS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBE521E02C16917B005F52ED /* XCRemoteSwiftPackageReference "CobyDS" */;
+			productName = CobyDS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CBE521C72C1690B3005F52ED /* Project object */;
 }
