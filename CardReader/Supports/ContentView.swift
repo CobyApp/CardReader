@@ -24,13 +24,10 @@ struct ContentView: View {
             
             // Transparent overlay
             VStack(spacing: 0) {
-                TopBarView(
-                    leftSide: .none,
-                    title: "카드 사진 촬영"
-                )
-                
                 // Top overlay
                 overlayColor
+                    .edgesIgnoringSafeArea(.top)
+                    .frame(height: BaseSize.topAreaPadding + 180)
                 
                 HStack(spacing: 0) {
                     // Left overlay
@@ -59,13 +56,29 @@ struct ContentView: View {
             }
             
             VStack {
+                HStack {
+                    Text("카드 사진 촬영")
+                        .font(.pretendard(size: 18, weight: .bold))
+                        .foregroundColor(Color.white)
+                }
+                .frame(maxWidth: .infinity, minHeight: 60)
+                
+                VStack(spacing: 16) {
+                    Text("카드를 영역에 맞춰주세요.")
+                        .font(.pretendard(size: 24, weight: .semibold))
+                        .foregroundColor(Color.white)
+                    
+                    Text("초점이 맞춰지면 자동으로 촬영돼요.")
+                        .font(.pretendard(size: 14, weight: .regular))
+                        .foregroundColor(Color.white)
+                }
+                .padding(.top, 50)
+                
                 Spacer()
-                Text(recognizedText)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(8)
-                    .shadow(radius: 10)
-                    .padding()
+                
+                Text("직접 입력하기")
+                    .font(.pretendard(size: 16, weight: .medium))
+                    .foregroundColor(Color.white)
             }
         }
     }
